@@ -4,45 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Семестровая работа</title>
+    <link rel="stylesheet" href="style/styles.css">
  </head>
  <body>
-    <div id="header">Хэдер</div>
-    <div id="menu">
-    <ul>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="pages/news.html">Новости</a></li>
-        <li><a href="pages/practices.html">Практики</a></li>
-        <li><a href="pages/goods.html">Товары</a></li>
-        <li><a href="pages/contacts.html">Контакты</a></li>
-    </ul>
-    </div>
-    <div id="content">
-        <p>Информация об авторе</p>
-        <img src="images/photo.jpg" alt="Фото автора" width="200" height="250">
-        <p>Герасимов Лев Михайлович</p>
-        <p>ЭФБО-07-24</p>
-        <p>Обо мне: Я родился в Нижнем Новгороде в 2006 на краю города. Переехал в Москву перед началом обучения в начальной школе. 
-            Сейчас обучаюсь в РТУ Мирэа.</p>
-        <div>Навык 1 python</div>
-        <div>Навык 2 C++</div>
-        <div>Навык 3 Ем арбузы</div>
-        <div>Навык 4 C#</div>
-        <div>
-            Мой опыт работы:
-            <div>
-                Опыт 1<br>
-                Работал рептилоидом в конце 11 класса.
+    <div class="page-container">
+        <div class="header">Хэдер</div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/practices.html">Практики</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/goods.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="profile-header">
+                <h1 class="profile-title">Информация об авторе</h1>
+                <img class="profile-photo" src="images/photo.jpg" alt="Фото автора" width="200" height="250">
+                <h2 class="profile-name">Герасимов Лев Михайлович</h2>
+                <p class="profile-group">ЭФБО-07-24</p>
             </div>
-            <div>
-                Опыт 2<br>
-                Работал доставщиком в яндекс смене.
+            <div class="about-me">
+                <p>Обо мне: Я родился в Нижнем Новгороде в 2006 на краю города. Переехал в Москву перед началом обучения в начальной школе. 
+                    Сейчас обучаюсь в РТУ Мирэа.</p>
             </div>
-            <div>
-                Опыт 3<br>
-                Работал сборщиком заказов в яндекс смене.
+            <div class="skills-container">
+                <div class="skill-tag">Навык 1 python</div>
+                <div class="skill-tag">Навык 2 C++</div>
+                <div class="skill-tag">Навык 3 Ем арбузы</div>
+                <div class="skill-tag">Навык 4 C#</div>
+            </div>
+            <div class="experience-section">
+                <h2 class="section-title">Мой опыт работы</h2>
+        
+                <div class="experience-card">
+                    <h3 class="experience-title">Опыт 1</h3>
+                    <p class="experience-desc">Работал рептилоидом в конце 11 класса.</p>
+                </div>
+                <div class="experience-card">
+                    <h3 class="experience-title">Опыт 2</h3>
+                    <p class="experience-desc">Работал доставщиком в яндекс смене.</p>
+                </div>
+                <div class="experience-card">
+                    <h3 class="experience-title">Опыт 3</h3>
+                    <p class="experience-desc">Работал сборщиком заказов в яндекс смене.</p>
+                </div> 
+                
             </div>
         </div>
+        
+        <div class="footer">Футер</div> 
     </div>
-    <div id="footer">Футер</div> 
  </body>
 </html>

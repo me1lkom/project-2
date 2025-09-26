@@ -3,36 +3,53 @@
  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/styles.css">
     <title>Семестровая работа</title>
  </head>
  <body>
-    <div id="header">Хэдер</div>
-    <div id="menu">
-    <ul>
-        <li><a href="../index.html">Главная</a></li>
-        <li><a href="news.html">Новости</a></li>
-        <li><a href="practices.html">Практики</a></li>
-        <li><a href="goods.html">Товары</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
-    </ul>
+    <div class="page-container">
+        <div class="header">Хэдер</div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
+                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1 class="goods-title">Наши товары</h1>
+            <div class="goods-section-card">
+                <div class="goods-card">
+                    <img class="card-photo" src="../images/product_1.jpg" alt="Фото товара" width="200" height="250">
+                    <p class="card-name">Самолейка</p>
+                    <p class="card-price">1000 рублей</p>
+                </div>
+                <div class="goods-card">
+                    <img class="card-photo" src="../images/product_2.jpg" alt="Фото товара" width="200" height="250">
+                    <p class="card-name">Набор безопастных столовых приборов</p>
+                    <p class="card-price">400 рублей</p>
+                </div>
+                <div class="goods-card">
+                    <img class="card-photo" src="../images/product_3.jpg" alt="Фото товара" width="200" height="250">
+                    <p class="card-name">Чашка для двоих</p>
+                    <p class="card-price">1500 рублей</p>
+                </div>
+                <div class="goods-card">
+                    <img class="card-photo" src="../images/product_3.jpg" alt="Фото товара" width="200" height="250">
+                    <p class="card-name">Чашка для двоих</p>
+                    <p class="card-price">1500 рублей</p>
+                </div>
+                <div class="goods-card">
+                    <img class="card-photo" src="../images/product_3.jpg" alt="Фото товара" width="200" height="250">
+                    <p class="card-name">Чашка для двоих</p>
+                    <p class="card-price">1500 рублей</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">Футер</div> 
     </div>
-    <div id="content">
-        <div>
-            <img src="../images/product_1.jpg" alt="Фото товара" width="200" height="250">
-            <p>Самолейка</p>
-            <p>1000 рублей</p>
-        </div>
-        <div>
-            <img src="../images/product_2.jpg" alt="Фото товара" width="200" height="250">
-            <p>Набор безопастных столовых приборов</p>
-            <p>400 рублей</p>
-        </div>
-        <div>
-            <img src="../images/product_3.jpg" alt="Фото товара" width="200" height="250">
-            <p>Чашка для двоих</p>
-            <p>1500 рублей</p>
-        </div>
-    </div>
-    <div id="footer">Футер</div> 
+
  </body>
 </html>

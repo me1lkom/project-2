@@ -3,28 +3,37 @@
  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/styles.css">
     <title>Семестровая работа</title>
  </head>
  <body>
-    <div id="header">Хэдер</div>
-    <div id="menu">
-    <ul>
-        <li><a href="../index.html">Главная</a></li>
-        <li><a href="news.html">Новости</a></li>
-        <li><a href="practices.html">Практики</a></li>
-        <li><a href="goods.html">Товары</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
-    </ul>
-    </div>
-    <div id="content">
-        <div>
-            <p>Адрес электронной почты: leva.gerasimosy@mail.ru</p>
-            <p>Адрес: г.Москва ул.Пампушкина д.6 кв.232</p>
+    <div class="page-container">
+        <div class="header">Хэдер</div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
+                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="contacts-section">
+                <h2 class="section-title">Контакты</h2>
+                <div class="contacts-card">
+                    <p>Адрес электронной почты: leva.gerasimosy@mail.ru</p>
+                </div>
+                <div class="contacts-card">
+                    <p>Адрес: г.Москва ул.Пампушкина д.6 кв.232</p>
+                </div>
+            </div>
+            <div class="button">
+                <button class="button-dialog_open" id="openDialog" type="button">Написать нам</button>
+            </div>
         </div>
-        <div>
-            <button class="button-dialog_open" id="openDialog" type="button">Написать нам</button>
-        </div>
+        <div class="footer">Футер</div> 
     </div>
-    <div id="footer">Футер</div> 
  </body>
 </html>
+
