@@ -1,5 +1,4 @@
 :root {
-    /* === НОВАЯ СИСТЕМА ПЕРЕМЕННЫХ === */
     --color-background: #ffffff;
     --color-surface: #ecf0f1;
     --color-text-base: #ffffff;
@@ -11,7 +10,6 @@
     --color-navigation: #222629;
     --color-error: #e74c3c;
 
-    /* Старые переменные пока оставляем для совместимости */
     /* --color-main: #61892f;
     --color-accent: #86c232;
     --color-light: #ecf0f1;
@@ -103,18 +101,18 @@ body {
     padding: 10px;
     border-radius: var(--radius);
     transition: background-color 0.3s;
-    width: 40px;        /* фиксированная ширина */
-    height: 40px;       /* фиксированная высота */
+    width: 40px;        
+    height: 40px;      
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .theme-toggle button img {
-    width: 24px;        /* размер иконки */
+    width: 24px;        
     height: 24px;
-    object-fit: contain; /* чтобы не деформировалась */
-    filter: invert(1); /* делает черное белым */
+    object-fit: contain;
+    filter: invert(1); 
 
 }
 
@@ -122,18 +120,19 @@ body {
     background: var(--color-accent);
 }
 
-.nav_list {  /* не nav__list */
+.nav_list {  
     list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.nav_item {  /* не nav__item */
+.nav_item { 
     margin: 0;
 }
 
-.nav_link {  /* не nav__link */
+.nav_link {  
     display: block;
     padding: var(--space-md);
     color: var(--color-text-base);
@@ -145,7 +144,7 @@ body {
     background: var(--color-accent);
 }
 
-.nav_item--active .nav_link {  /* не nav__item--active */
+.nav_item--active .nav_link {   
     background: var(--color-navigation);
     font-weight: bold;
 }
@@ -429,7 +428,7 @@ body {
 }
 
 /* Блок кнопки modal */
-.contacts_button {  /* не contacts__button */
+.contacts_button {  
     padding: var(--space-md);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
@@ -705,6 +704,9 @@ dialog::backdrop {
 
     .nav__list {
         flex-direction: column;
+    }
+    .nav_item{
+        width: 100%;
     }
 
     .skills__list {
