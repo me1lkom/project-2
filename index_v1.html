@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семестровая работа</title>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+
+<body>
+    <div class="page">
+        <header class="header">
+            <h1 class="header__title">Главная</h1>
+        </header>
+        <nav class="nav">
+            <section class="nav__container">
+                <ul class="nav_list">
+                    <li class="nav_item nav_item--active">
+                        <a class="nav_link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav_item nav_item--active">
+                        <a class="nav_link" href="pages/news.html">Новости</a>
+                    </li>
+                    <li class="nav_item nav_item--active">
+                        <a class="nav_link" href="pages/practices.html">Практики</a>
+                    </li>
+                    <li class="nav_item nav_item--active">
+                        <a class="nav_link" href="pages/goods.html">Товары</a>
+                    </li>
+                    <li class="nav_item nav_item--active">
+                        <a class="nav_link" href="pages/contacts.html">Контакты</a>
+                    </li>
+                </ul>
+                <div class="theme-toggle">                
+                        <button id="themeToggle"><img src="images/icon_theme.png"></button>
+                </div>
+            </section>
+        </nav>
+        <main class="main">
+            
+            <section class="profile">
+                <div class="profile__card">
+                    <img class="profile__photo" src="images/photo.png" alt="Фото">
+                    <div class="profile__info">
+                        <h2 class="profile__name">Герасимов Лев Михайлович</h2>
+                        <p class="profile__group">ЭФБО-07-24</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="about">
+                <h2 class="about__title">Обо мне</h2>
+                <div class="about_content">
+                    <p class="about__text">Я родился в Нижнем Новгороде в 2006. Переехал в Москву перед началом обучения в начальной школе. Сейчас студент РТУ Мирэа.</p>
+                </div>
+            </section>
+
+            <section class="skills">
+                <h2 class="skills__title">Мои навыки</h2>
+                <div class="skills__list">
+                    <div class="skill skill--python">
+                        <span class="skill_name">python</span>
+                    </div>
+                    <div class="skill skill--html">
+                        <span class="skill_name">html</span>
+                    </div>
+                    <div class="skill skill--js">
+                        <span class="skill_name">js</span>
+                    </div>
+                    <div class="skill skill--css">
+                        <span class="skill_name">css</span>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="experience">
+                <h2 class="experience__title">Мой опыт работы</h2>
+                <div class="experience__list">
+                    <article class="experience-card">
+                        <h3 class="experience-card__title">Рептилоид</h3>
+                        <p class="experience-card__desc">Работал рептилоидом в конце 11 класса.</p>
+                    </article>
+                    <article class="experience-card">
+                        <h3 class="experience-card__title">Доставщик</h3>
+                        <p class="experience-card__desc">Работал доставщиком в яндекс смене.</p>
+                    </article>
+                    <article class="experience-card">
+                        <h3 class="experience-card__title">Сборщик</h3>
+                        <p class="experience-card__desc">Работал сборщиком заказов в яндекс смене.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p class="footer__text">&copy; 2025 Все права защищены.</p>
+        </footer>
+
+
+    </div>
+    <script src="js/theme.js"></script>
+</body>
+
+</html>

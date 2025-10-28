@@ -7,44 +7,70 @@
     <title>Семестровая работа</title>
  </head>
  <body>
-    <div class="page-container">
-        <div class="header">Хэдер</div>
-        <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
-            </ul>
+    <div class="page">
+        <header class="header"><h1 class="header__title">Новости</h1></header>
+       <nav class="nav">
+            <section class="nav__container">
+                <ul class="nav_list">
+                    <li class="nav_item nav_item--active">
+                        <a class="nav_link" href="../index.html">Главная</a>
+                    </li>
+                    <li class="nav_item nav_item--active">
+                        <a class="nav_link" href="news.html">Новости</a>
+                    </li>
+                    <li class="nav_item nav_item--active">
+                        <a class="nav_link" href="practices.html">Практики</a>
+                    </li>
+                    <li class="nav_item nav_item--active">
+                        <a class="nav_link" href="goods.html">Товары</a>
+                    </li>
+                    <li class="nav_item nav_item--active">
+                        <a class="nav_link" href="contacts.html">Контакты</a>
+                    </li>
+                </ul>
+                <div class="theme-toggle">                
+                        <button id="themeToggle"><img src="../images/icon_theme.png"></button>
+                </div>
+            </section>
         </nav>
-        <div class="content">
-            <div class="news-section">
-                <div class="news-card">
-                    <h2 class="news-title">Скандал у магазина "Дядя Ваня"</h2>
-                    <p class="news-date">01.09.12 07:23 Анатюкина Анастасия</p>
-                    <p class="news-desc">Вчера вечером у входа в магазин «Дядя Ваня» произошла словесная перепалка между местной жительницей Анной Петровной К. и приезжим фермером. 
-                        Причиной конфликта стала партия испорченных помидоров. 
-                        Инцидент был исчердан после вмешательства участкового Сергея Ивановича Белова. Стороны примирились.</p>
-                </div>
-                <div class="news-card">
-                    <h2 class="news-title">Ограбление местного сумасшедшего</h2>
-                    <p class="news-date">13.06.12 Неместный Артём</p>
-                    <p class="news-desc">На прошлой неделе у известного в городе сумасшедшего, похитили мусор из квартиры.
-                        По словам потерпевшего, он не успел даже опомниться, когда его квартиру обносили. 
-                        Полиция проводит проверку, но не питает надежды найти помои.</p>
-                </div>
-                <div class="news-card">
-                    <h2 class="news-title">Повышение утильсбора приведёт авторынок в упадок</h2>
-                    <p class="news-date">20.09.25 Громкий Андрей</p>
-                    <p class="news-desc"> КОШМАР ДЛЯ АВТОЛЮБИТЕЛЕЙ! Власти готовят удар по каждому, кто собирался купить нормальный автомобиль! 
-                        Новый утильсбор ВЫЖИГАЕТ карманы автолюбителей дотла. Эксперты в шоке: «После этого на дорогах останутся только автоваз!» 
-                        Этот закон — конец доступному автопрому!
-                        Вы готовы платить за воздух несколько миллионов, тогда радуйтесь!</p>
-                </div>
-            </div>
-        </div>
-        <div class="footer">Футер</div> 
-    </div>
+        <main class="main">
+            <section class="news">
+                <h2 class="news__title">Плохие новости</h2>
+                <div class="news__list">
+                    <article class="news-item">
+                        <header class="news-header">
+                            <h2 class="news-item__title">Скандал у магазина "Дядя Ваня"</h2>
+                            <p class="news-item__date">01.09.12 07:23 | Анатюкина Анастасия</p>
+                        </header>
+                        <p class="news-item__text">Вчера вечером у входа в магазин «Дядя Ваня» произошла словесная перепалка между местной жительницей Анной Петровной К. и приезжим фермером. 
+                            Причиной конфликта стала партия испорченных помидоров. 
+                            Инцидент был исчердан после вмешательства участкового Сергея Ивановича Белова. Стороны примирились.</p>
+                    </article>
+                    <article class="news-item">
+                        <header class="news-header">
+                            <h2 class="news-item__title">Ограбление местного сумасшедшего</h2>
+                            <p class="news-item__date">13.06.12 | Неместный Артём</p>
+                        </header>
+                        <p class="news-item__text">На прошлой неделе у известного в городе сумасшедшего, похитили мусор из квартиры.
+                            По словам потерпевшего, он не успел даже опомниться, когда его квартиру обносили. 
+                            Полиция проводит проверку, но не питает надежды найти помои.</p>
+                    </article>
+                    <article class="news-item">
+                        <header class="news-header">
+                            <h2 class="news-item__title">Повышение утильсбора приведёт авторынок в упадок</h2>
+                            <p class="news-item__date">20.09.25 | Громкий Андрей</p>
+                        </header>
+                        <p class="news-item__text"> КОШМАР ДЛЯ АВТОЛЮБИТЕЛЕЙ! Власти готовят удар по каждому, кто собирался купить нормальный автомобиль! 
+                            Новый утильсбор ВЫЖИГАЕТ карманы автолюбителей дотла. Эксперты в шоке: «После этого на дорогах останутся только автоваз!» 
+                            Этот закон — конец доступному автопрому!
+                            Вы готовы платить за воздух несколько миллионов, тогда радуйтесь!</p>
+                    </article>  
+                </div>                
+            </section>
+        </main>
+        <footer class="footer">
+            <p class="footer__text">&copy; 2025  Все права защищены.</p>
+        </footer>
+    <script src="../js/theme.js"></script>
  </body>
 </html>

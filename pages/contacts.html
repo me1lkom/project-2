@@ -1,39 +1,128 @@
 <!DOCTYPE html>
-<html>
- <head>
+<html lang="ru">
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
     <link rel="stylesheet" href="../style/styles.css">
-    <title>Семестровая работа</title>
- </head>
- <body>
-    <div class="page-container">
-        <div class="header">Хэдер</div>
-        <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
-            </ul>
-        </nav>
-        <div class="content">
-            <div class="contacts-section">
-                <h2 class="section-title">Контакты</h2>
-                <div class="contacts-card">
-                    <p>Адрес электронной почты: leva.gerasimosy@mail.ru</p>
-                </div>
-                <div class="contacts-card">
-                    <p>Адрес: г.Москва ул.Пампушкина д.6 кв.232</p>
-                </div>
-            </div>
-            <div class="button">
-                <button class="button-dialog_open" id="openDialog" type="button">Написать нам</button>
-            </div>
-        </div>
-        <div class="footer">Футер</div> 
-    </div>
- </body>
-</html>
+</head>
 
+<body>
+    <div class="page">
+        <header class="header">
+            <h1 class="header__title">Контакт</h1>
+        </header>
+        <nav class="nav">
+            <section class="nav__container">
+                <ul class="nav_list">
+                    <li class="nav_item nav_item--active">
+                        <a class="nav_link" href="../index.html">Главная</a>
+                    </li>
+                    <li class="nav_item nav_item--active">
+                        <a class="nav_link" href="news.html">Новости</a>
+                    </li>
+                    <li class="nav_item nav_item--active">
+                        <a class="nav_link" href="practices.html">Практики</a>
+                    </li>
+                    <li class="nav_item nav_item--active">
+                        <a class="nav_link" href="goods.html">Товары</a>
+                    </li>
+                    <li class="nav_item nav_item--active">
+                        <a class="nav_link" href="contacts.html">Контакты</a>
+                    </li>
+                </ul>
+                <div class="theme-toggle">                
+                        <button id="themeToggle"><img src="../images/icon_theme.png"></button>
+                </div>
+            </section>
+        </nav>
+        <main class="main">
+            <section class="contacts">
+                <h2 class="contacts__title">Наши контакты</h2>
+
+                <article class="contacts__info">
+                    <h3 class="contacts-item__title">Электронная почта</h3>
+                    <p class="contacts-item__value">Адрес электронной почты: leva.gerasimov@gmail.com</p>
+                </article>
+
+                <article class="contacts__info">
+                    <h3 class="contacts-item__title">Физический адрес</h3>
+                    <p class="contacts-item__value">Адрес: г. Москва, ул. Пушкина, д. Колотушкина</p>
+                </article>
+                <div class="contacts_grid">
+                    <div class="contacts-item">
+                        <h3 class="contacts-item__title">Телефон</h3>
+                        <p class="contacts-item__value">+7 (823) 324 23-23</p>
+                    </div>
+                    <div class="contacts-item">
+                        <h3 class="contacts-item__title">Время работы</h3>
+                        <p class="contacts-item__value">Пн-Пт: 9:00-18:00</p>
+                    </div>
+                    <div class="contacts-item">
+                        <h3 class="contacts-item__title">Социальные сети</h3>
+                        <p class="contacts-item__value">VK, Telegram, WhatsApp</p>
+                    </div>
+                </div>
+                <div class="button">                
+                    <button class="contacts_button" onclick="contactModal.showModal()">Связаться с нами</button>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <p class="footer__text">&copy; 2025 Все права защищены.</p>
+        </footer>
+        <dialog id="contactModal">
+            <div class="modal-header">
+                <h2>Форма обратной связи</h2>
+            </div>
+
+            <div class="modal-content">
+                <form id="feedbackForm" method="dialog">
+                    <div class="form-group">
+                        <label for="name">Имя <span class="required">*</span>
+                        </label>
+                        <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон <span class="required">*
+                            </span></label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Электронная почта <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="example@mail.ru">
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Категория обращения <span class="required">*</span></label>
+                        <select id="category" name="category" required>
+                            <option value="">Выберите категорию</option>
+                            <option value="technical">Техническая
+                                поддержка</option>
+                            <option value="commercial">Коммерческое
+                                предложение</option>
+                            <option value="cooperation">Сотрудничество</option>
+                            <option value="complaint">Жалоба</option>
+                            <option value="suggestion">Предложение</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Текст обращения <span class="required">*</span></label>
+                        <textarea id="message" name="message" required
+                            placeholder="Опишите вашу проблему или вопрос..."></textarea>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="btn btnsecondary" id="cancel">Отмена</button>
+                        <button type="button" class="btn btn-primary" onclick="submitForm()">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </dialog>
+        
+    </div>
+    <script src="../js/script.js"></script>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>
