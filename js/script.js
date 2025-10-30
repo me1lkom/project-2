@@ -1,4 +1,3 @@
-// Проверка в реальном времени при вводе
 document.getElementById('name').addEventListener('input', validateName);
 document.getElementById('phone').addEventListener('input', validatePhone);
 document.getElementById('email').addEventListener('input', validateEmail);
@@ -6,12 +5,10 @@ document.getElementById('category').addEventListener('change', validateCategory)
 document.getElementById('message').addEventListener('input', validateMessage);
 
 
-// Валидация имени
 function validateName() {
     const nameInput = document.getElementById('name');
     const name = nameInput.value.trim();
     
-    // Проверяем: только кириллица и пробелы, минимум 2 символа
     const nameRegex = /^[а-яёА-ЯЁ\s]{2,}$/;
     
     if (!nameRegex.test(name)) {
@@ -22,12 +19,11 @@ function validateName() {
         return true;
     }
 }
-// валидация телефона с форматированием
+
 function validatePhone() {
     const phoneInput = document.getElementById('phone');
-    const phone = phoneInput.value.replace(/\D/g, ''); // Удаляем всё кроме цифр
+    const phone = phoneInput.value.replace(/\D/g, '');
     
-    // Форматируем номер если есть цифры
     let formattedPhone = '';
     if (phone.length > 0) {
         formattedPhone = '+7 (';
@@ -44,11 +40,9 @@ function validatePhone() {
             formattedPhone += '-' + phone.substring(9, 11);
         }
         
-        // Обновляем значение в поле
         phoneInput.value = formattedPhone;
     }
     
-    // Проверяем: ровно 11 цифр
     if (phone.length !== 11) {
         showError(phoneInput, 'Телефон должен содержать 11 цифр');
         return false;
@@ -57,17 +51,12 @@ function validatePhone() {
         return true;
     }
 }
-// Запрет на всё кроме цифр
-document.getElementById('phone').addEventListener('input', function(e) {
-    this.value = this.value.replace(/\D/g, '');
-});
 
-// Валидация email 
+
 function validateEmail() {
     const emailInput = document.getElementById('email');
     const email = emailInput.value;
     
-    // Проверяем стандартный формат email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     
     if (!emailRegex.test(email)) {
@@ -78,12 +67,11 @@ function validateEmail() {
         return true;
     }
 }
-// Валидация категорий
+
 function validateCategory() {
     const categoryInput = document.getElementById('category');
     const category = categoryInput.value;
     
-    // Проверяем: выбрана ли какая-то категория
     if (!category) {
         showError(categoryInput, 'Выберите категорию обращения');
         return false;
@@ -92,12 +80,11 @@ function validateCategory() {
         return true;
     }
 }
-// Валидация обращения
+
 function validateMessage() {
     const messageInput = document.getElementById('message');
     const message = messageInput.value.trim();
     
-    // Проверяем: от 10 до 500 символов
     if (message.length < 10) {
         showError(messageInput, 'Сообщение должно содержать минимум 10 символов');
         return false;
@@ -106,13 +93,11 @@ function validateMessage() {
         return true;
     }
 }
-// Обработка ошибки
+
 function showError(input, message) {
-    // Добавляем красную обводку
     input.style.borderColor = '#dc3545';
     input.style.boxShadow = '0 0 5px rgba(220, 53, 69, 0.3)';
     
-    // Показываем текст ошибки
     let errorElement = input.parentElement.querySelector('.error-message');
     if (!errorElement) {
         errorElement = document.createElement('span');
@@ -125,25 +110,23 @@ function showError(input, message) {
     }
     errorElement.textContent = message;
 }
-// Очистка ошибки
+
 function clearError(input) {
-    // Убираем обводку
     input.style.borderColor = '';
     input.style.boxShadow = '';
     
-    // Скрываем текст ошибки
     const errorElement = input.parentElement.querySelector('.error-message');
     if (errorElement) {
         errorElement.textContent = '';
     }
 }
-// Очистка ошибок при закрытии модалки
+
 document.getElementById('cancel').addEventListener('click', function() {
     clearAllErrors();
     contactModal.close();
 });
 
-// Общая проверка выполнения валидаций
+
 function validateForm() {
     const isNameValid = validateName();
     const isPhoneValid = validatePhone();
@@ -161,10 +144,8 @@ function clearAllErrors() {
     });
 }
 
-// Функция для отправки формы
 function submitForm() {
     
-    // Простая валидация
     if (!validateForm()) {
         return;
     }
@@ -172,8 +153,6 @@ function submitForm() {
     const form = document.getElementById('feedbackForm');
     const formData = new FormData(form);
 
-
-    // Собираем данные формы
     const data = {
         name: formData.get('name'),
         phone: formData.get('phone'),
@@ -181,41 +160,38 @@ function submitForm() {
         category: formData.get('category'),
         message: formData.get('message')
     };
-    // В реальном приложении здесь был бы AJAX-запрос
+
     console.log('Данные формы:', data);
 
-    // Показываем уведомление об успешной отправке
+
     alert('Спасибо! Ваше обращение отправлено. Мы свяжемся с вами в ближайшее время.');
 
-    // Закрываем модальное окно
+
     contactModal.close();
 
-    // Очищаем форму
+
     form.reset();
 
     clearAllErrors();
 
 }
 
-// Закрытие модального окна по кнопке "Отмена"
 document.getElementById('cancel').addEventListener('click', function () {
     contactModal.close();
 });
 
-// Закрытие модального окна по клику на фон
 document.getElementById('contactModal').addEventListener('click', function (event) {
     if (event.target === this) {
         this.close();
     }
 });
 
-// Обработка отправки формы через Enter (предотвращаем стандартное поведение)
 document.getElementById('feedbackForm').addEventListener('keypress',
     function (event) {
         if (event.key === 'Enter' && event.target.type !== 'textarea') {
             event.preventDefault();
-        }
-    });
+    }
+});
 
     
 
