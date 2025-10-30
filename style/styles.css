@@ -120,7 +120,7 @@ body {
     background: var(--color-accent);
 }
 
-.nav_list {  
+.nav__list {  
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -128,11 +128,11 @@ body {
     flex-wrap: wrap;
 }
 
-.nav_item { 
+.nav__item { 
     margin: 0;
 }
 
-.nav_link {  
+.nav__link {  
     display: block;
     padding: var(--space-md);
     color: var(--color-text-base);
@@ -140,16 +140,16 @@ body {
     transition: background-color 0.3s;
 }
 
-.nav_link:hover {
+.nav__link:hover {
     background: var(--color-accent);
 }
 
-.nav_item--active .nav_link {   
+.nav__item--active .nav__link {   
     background: var(--color-navigation);
     font-weight: bold;
 }
 
-.nav_item--active:hover .nav_link {
+.nav__item--active:hover .nav__link {
     background-color: var(--color-accent);
     border-radius: var(--radius);
 }
