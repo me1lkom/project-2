@@ -53,14 +53,17 @@
                             </div>
                         </article>
                         
-                        <article class="product-item">
+                        <article class="product-item product-item--sale">
                             <div class="product-item__image-container">
                                 <img class="product-item__image" src="../images/product_2.jpg" alt="Безопасные столовые приборы">
                             </div>
                             <div class="product-item__info">
                                 <h3 class="product-item__name">Безопасные столовые приборы</h3>
                                 <p class="product-item__description">Хоть есть и неудобно, зато очень безопасно</p>
-                                <p class="product-item__price">64 990 ₽</p>
+                                <div class="product-item__price-sale">
+                                    <p class="product-item__old-price">64 990 ₽</p>
+                                    <p class="product-item__sale-price">990 ₽</p>
+                                </div>
                                 <button class="product-item__button">В корзину</button>
                             </div>
                         </article>
@@ -73,7 +76,7 @@
                                 <h3 class="product-item__name">Чашка для двоих</h3>
                                 <p class="product-item__description">Раздели напиток с любимой</p>
                                 <p class="product-item__price">12 990 ₽</p>
-                                <button class="product-item__button">В корзину</button>
+                                <button class="product-item__button product-item__select-button">В корзину</button>
                             </div>
                         </article>
                     </div>
@@ -86,5 +89,6 @@
         </div>
 
         <script src="../js/theme.js"></script>
+        <script src="../js/product.js"></script>
     </body>
 </html>
